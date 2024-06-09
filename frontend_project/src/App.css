@@ -1,0 +1,61 @@
+/* App.css */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    cursor: url('./cursor/cursor.svg'), auto;
+}
+
+.block {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.6s ease;
+    cursor: url('./cursor/cursor.svg'), auto;
+}
+
+.left,
+.right {
+    cursor: url('./cursor/cursor.svg'), auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #40C057;
+    font-family: 'Courier New', Courier, monospace;
+    transition: flex 0.6s ease;
+}
+
+.left {
+    background-color: rgb(44, 42, 42);
+}
+
+.right {
+    background-color: rgb(44, 42, 42);
+}
+
+.block:hover .left:hover {
+    flex: 7;
+}
+
+.block:hover .right:hover {
+    flex: 7;
+}
+
+.block:hover .left:not(:hover),
+.block:hover .right:not(:hover) {
+    flex: 3;
+    opacity: 0.4;
+}
+
+.matrix-text {
+    color: #40C057;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}

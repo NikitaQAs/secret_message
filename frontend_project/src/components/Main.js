@@ -1,10 +1,16 @@
+import React from 'react';
+import '../App.css';
+
 function Main() {
     return (
-        <div >
-            <a href="/create">Create new Note   </a>
-            <hr />
-            <a href="/note"> Check Note</a>
-        </div>
+        <div className="block">
+            <a className="left" href="/create">
+                <div className="matrix-text" >Create new Note</div>
+            </a>
+            <a className="right" href="/note">
+                <div className="matrix-text" >Check Note</div>
+            </a>
+        </div >
     );
 }
 

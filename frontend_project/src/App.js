@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="main">
       <Router>
-        <Header></Header>
         <Routes>
           <Route exact path='/' element={<Main />} />
           <Route path='/about' element={<About />} />
@@ -24,7 +23,6 @@ function App() {
           <Route path='*' element={<Error />} />
         </Routes>
       </Router>
-      <Footer></Footer>
     </div>
   );
 }

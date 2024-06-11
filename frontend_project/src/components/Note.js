@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import env from '../env.json';
+import '../styles/noteStyle.css'
 
 function Note() {
     let { noteURL } = useParams();
@@ -57,19 +58,23 @@ function Note() {
     }
 
     return (
-        <div>
+        <div class='Note'>
             <div className={lineCLass}>
                 <div>{noteText}</div>
                 <div><button onClick={searchNote}>Check other Note</button></div>
             </div>
             <div className={formError}>
-                <div>There is no such Note</div>
+                <div class='matrix-text'>There is no such Note</div>
+                <div><button onClick={searchNote} className="btn">Check other Note</button></div>
             </div>
             <div className={formClass}>
-                <form action="" onSubmit={getNote}>
-                    <label htmlFor="url">Input hash</label>
-                    <input type="text" name="url" id="url" className="form-control" />
-                    <button type="submit" className="btn">Check the Note</button>
+                <form action="" class="form" onSubmit={getNote}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <input type="text" name="url" id="url" className="input" placeholder="Enter Note" />
+                    <button type="submit" className="btn" >Check the Note</button>
                 </form>
             </div>
         </div>

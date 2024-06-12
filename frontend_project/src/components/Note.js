@@ -60,8 +60,8 @@ function Note() {
     return (
         <div class='Note'>
             <div className={lineCLass}>
-                <div>{noteText}</div>
-                <div><button onClick={searchNote}>Check other Note</button></div>
+                <div class='text-output' >{noteText}</div>
+                <div><button onClick={searchNote} class='btn'>Check other Note</button></div>
             </div>
             <div className={formError}>
                 <div class='matrix-text'>There is no such Note</div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import '../style.css'
 import env from '../env.json';
+import '../styles/noteStyle.css'
 
 function Create() {
     const [url, setURL] = useState('');
@@ -36,15 +37,19 @@ function Create() {
     }
 
     return (
-        <div onSubmit={sendForm} >
-            <form action="" className={lineForm}>
+        <div onSubmit={sendForm} class='Create' >
+            <form action="" className={lineForm} class='form'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 <label htmlFor="">Enter your Note</label>
-                <textarea name="note" id="note" defaultValue='Enter your Note'></textarea>
-                <button type='submit'>Create Note</button>
+                <input name="note" id="note" placeholder='Enter your note' className='input'></input>
+                <button type='submit' class='btn'>Create Note</button>
             </form>
             <div className={lineClass}>
-                <div>{url}</div>
-                <div><button onClick={function () { window.location.reload() }}>Create new Note</button></div>
+                <div class='matrix-text'>{url}</div>
+                <div><button class='btn' onClick={function () { window.location.reload() }}>Create new Note</button></div>
             </div >
         </div >
     );

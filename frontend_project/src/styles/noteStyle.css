@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.Note {
+.Note,
+.Create {
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
@@ -34,6 +35,17 @@
     height: 100%;
     width: 100%;
     padding: 25px;
+}
+
+.text-output {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #40C057;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    font-size: 20px;
 }
 
 .input,

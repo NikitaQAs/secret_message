@@ -10,6 +10,27 @@
     background: rgb(44, 42, 42);
 }
 
+.backButton {
+    bottom: 0;
+    margin-top: 1px;
+    margin-right: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: url('../cursor/cursor.svg'), auto;
+    color: #40C057;
+    border: none;
+    background: rgb(44, 42, 42);
+    transition: 0.7s;
+    outline: none;
+}
+
+.backButton:hover {
+    background: rgba(0, 255, 0, 0.5);
+    opacity: 0.4;
+}
+
 .form {
     position: relative;
     padding: 60px 50px;

@@ -36,8 +36,29 @@ function Create() {
         sendData({ "note": note });
     }
 
+    const backMain = () => {
+        fetch(env.urlMain, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = env.urlMain;
+                }
+                else {
+                    console.error('error backMain', response.statusText)
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка сети:', error);
+            });
+    }
+
     return (
         <div onSubmit={sendForm} class='Create' >
+            <button class='backButton' onClick={backMain}>Back</button>
             <form action="" className={lineForm} class='form'>
                 <span></span>
                 <span></span>

@@ -57,8 +57,29 @@ function Note() {
         window.location.href = env.urlFE;
     }
 
+    const backMain = () => {
+        fetch(env.urlMain, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = env.urlMain;
+                }
+                else {
+                    console.error('error backMain', response.statusText)
+                }
+            })
+            .catch(error => {
+                console.error('ERROR', error);
+            });
+    }
+
     return (
         <div class='Note'>
+            <button class='backButton' onClick={backMain}>Back</button>
             <div className={lineCLass}>
                 <div class='text-output' >{noteText}</div>
                 <div><button onClick={searchNote} class='btn'>Check other Note</button></div>
